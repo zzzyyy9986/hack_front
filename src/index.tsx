@@ -3,11 +3,11 @@ import ReactDOM from "react-dom/client";
 import "bootstrap/dist/css/bootstrap.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { RootStoreContext } from "./store/root-store-context";
-import { RootStore } from "./store/root-store";
 import { Test } from "./components/Test";
+import {App} from "./App";
+import {Provider} from "mobx-react";
+import {todoStore} from "./store/TodoStore";
 
 const router = createBrowserRouter([
   {
@@ -25,9 +25,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <RootStoreContext.Provider value={new RootStore()}>
-      <RouterProvider router={router} />
-    </RootStoreContext.Provider>
+      <App />
   </React.StrictMode>,
 );
 

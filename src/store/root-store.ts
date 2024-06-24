@@ -1,5 +1,4 @@
-import { Tasks } from "./Tasks";
+import {createContext} from "react";
+import {todoStore} from "./TodoStore";
 
-export class RootStore {
-  tasksGl = new Tasks();
-}
+export const TodoStoreContext = createContext({todoStore:todoStore});
