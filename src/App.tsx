@@ -1,11 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import {observer} from "mobx-react-lite";
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import {Test} from "./components/Test";
-import {makeAutoObservable} from "mobx";
-import {Provider} from "mobx-react";
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { observer } from "mobx-react-lite";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { MainPage } from "./components/pages/MainPage";
+import { makeAutoObservable } from "mobx";
+import { Provider } from "mobx-react";
 
 // function App() {
 //   return (
@@ -35,21 +35,17 @@ const router = createBrowserRouter([
   },
   {
     path: "/test",
-    element: <Test />,
+    element: <MainPage />,
   },
 ]);
 
-
 export const App = observer((props, context) => {
   return (
-      <div className="App">
-        <RouterProvider   router={router}/>
-      </div>
-
+    <div className="App">
+      <RouterProvider router={router} />
+    </div>
   );
 });
-
-
 
 // class Timer {
 //   secondsPassed = 0

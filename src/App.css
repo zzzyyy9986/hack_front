@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+body {
+  background-color: #212529;
+  /* Темный фон для всего приложения */
+}
+
+.chat-box {
+  background-color: #495057;
+  /* Темный фон для области чата */
+  border-radius: 0.5rem;
+}

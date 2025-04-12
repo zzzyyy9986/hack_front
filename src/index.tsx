@@ -4,10 +4,10 @@ import "bootstrap/dist/css/bootstrap.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import { Test } from "./components/Test";
-import {App} from "./App";
-import {Provider} from "mobx-react";
-import {todoStore} from "./store/TodoStore";
+import { MainPage } from "./components/pages/MainPage";
+import { App } from "./App";
+import { Provider } from "mobx-react";
+import { todoStore } from "./store/TodoStore";
 
 const router = createBrowserRouter([
   {
@@ -16,17 +16,17 @@ const router = createBrowserRouter([
   },
   {
     path: "/test",
-    element: <Test />,
+    element: <MainPage />,
   },
 ]);
 
 const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement,
+  document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-      <App />
-  </React.StrictMode>,
+    <App />
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
