@@ -1,17 +1,18 @@
 import { ReactNode } from "react";
+import { ILanguage } from "./ListOfLanguages";
+import { FlagsPanel } from "./FlagsPanel";
 
 export const BasePage = ({ children }: { children: ReactNode }) => {
+    const onPickLanguage = () => {
+
+    }
   return (
-    <div className="container-fluid">
-      <div>
-        <div>
-          <span className=" mt-1 me-1">Идеи</span>
-          <span className=" mt-1">Туры</span>
+    <div className="container-fluid space-between">
+      <div className="d-flex justify-content-between">
+       <FlagsPanel></FlagsPanel>
+        <div className="partners">
+          <a href="">Вы - турагенство?</a>
         </div>
-              <a href="">Вы - турагенство?</a>
-              <div>
-                  
-              </div>
       </div>
       {/* <hr /> */}
       {children}

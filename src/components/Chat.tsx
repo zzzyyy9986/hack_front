@@ -21,7 +21,7 @@ const ChatMessage = ({
           alt="Chat"
         />
 
-        <p className="card-text">{description}</p>
+        <p className="card-text" style={{textAlign:'left'}}>{description}</p>
         <hr />
         <div
           className="d-flex justify-content-between"
@@ -50,7 +50,7 @@ export const Chat = observer(() => {
   const onSendMessage = async (e: any) => {
     e.preventDefault();
     searchGl.searchQuery(searchValue);
-    // setSearchValue("");
+    setSearchValue("");
   };
   return (
     <div
@@ -80,7 +80,7 @@ export const Chat = observer(() => {
                   textAlign: "left",
                 }}
               >
-                <div className=" p-2 rounded">{el.message}</div>
+                <div className=" p-2 ">{el.message}</div>
               </div>
             );
           }

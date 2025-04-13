@@ -32,8 +32,17 @@ export class SearchStore {
   ];
   public uniqueId: string = Math.random().toString(16).slice(2);
   public listOfTopics: ITopic[] = [];
-  public listOfPlaces: IPlace[] = [];
-  public currentLanguae = "русский";
+  public listOfPlaces: IPlace[] = [
+    {
+      id: 999,
+      name: "Краснодарский край",
+      img: "https://avatars.mds.yandex.net/i?id=2def298ed3a4cb259db0c9f74f9c7772_l-4801058-images-thumbs&n=13",
+      description:
+        "Краснодарский край — это настоящий центр туризма в России, который привлекает путешественников своими разнообразными природными ландшафтами и уникальными возможностями для отдыха. Здесь можно насладиться великолепием Кавказских гор, предлагающих захватывающие виды и маршруты для активного туризма, а также расслабиться на солнечных пляжах ",
+      topicId: 0,
+    },
+  ];
+  public currentLanguae: ILanguage = {} as ILanguage;
 
   public selectedLanguage: ILanguage = {} as ILanguage;
   constructor() {
