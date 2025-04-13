@@ -37,7 +37,8 @@
   }
 }
 body {
-  background-color: #212529;
+  /* background-color: #212529; */
+  background-color: #D9D9D9;
   /* Темный фон для всего приложения */
 }
 
@@ -45,4 +46,21 @@ body {
   background-color: #495057;
   /* Темный фон для области чата */
   border-radius: 0.5rem;
+}
+.category{
+  font-size: 1.1rem;
+    color: white;
+    border:1px solid white;
+    padding:5px;
+    border-radius:10px;
+}
+
+.tour-button{
+  /* Tours */
+  
+    position: absolute;
+    left: 23.92%;
+    right: 57%;
+    top: 18.42%;
+    bottom: 25.44%;
 }

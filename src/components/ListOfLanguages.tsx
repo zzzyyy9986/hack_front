@@ -13,27 +13,33 @@ export const ListOfLanguages = observer(() => {
 
   const [listOfLanguges, setListOfLanguages] = useState<ILanguage[]>([
     {
-      name: "Русский",
-      symbol: "ru",
-      localName: "Русский",
+      name: "Иран",
+      symbol: "ir",
+      localName: "Иран",
     },
     {
-      name: "Арабский",
-      symbol: "ar",
-      localName: "Арабский",
+      name: "Арабия",
+      symbol: "ae",
+      localName: "Страны персидского залива",
     },
     {
-      name: "Китайский",
+      name: "Индия",
+      symbol: "in",
+      localName: "Индия",
+    },
+    {
+      name: "Китай",
       symbol: "cn",
-      localName: "Китайский",
+      localName: "Китай",
     },
   ]);
 
-  const onLanguageClick = (lang: ILanguage) => {
+  const onLanguageClick = async (lang: ILanguage) => {
     searchGl.selectedLanguage = lang;
+    searchGl.getTopics(lang.symbol);
   };
   return (
-      <div className="language-tabs d-flex justify-content-center">
+    <div className="language-tabs d-flex justify-content-center">
       <ul className="nav nav-tabs">
         {listOfLanguges.map((language) => {
           return (
@@ -42,7 +48,15 @@ export const ListOfLanguages = observer(() => {
               onClick={() => onLanguageClick(language)}
               key={language.symbol}
             >
-                  <span className={"nav-link " + (searchGl.selectedLanguage.symbol === language.symbol ? " active" : "")} id="lang-ru" >
+              <span
+                className={
+                  "nav-link " +
+                  (searchGl.selectedLanguage.symbol === language.symbol
+                    ? " active"
+                    : "")
+                }
+                id="lang-ru"
+              >
                 {language.name}
               </span>
             </li>
